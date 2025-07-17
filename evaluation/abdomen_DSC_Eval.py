@@ -17,20 +17,23 @@ from tqdm import tqdm
 
 import argparse
 parser = argparse.ArgumentParser()
+#存放真实标签（Ground Truth）的路径
 parser.add_argument(
     '--gt_path',
     type=str,
-    default='/workspace/U-Mamba/data/nnUNet_raw/Dataset702_AbdomenMR/labelsTs'
+    default=''
 )
+#存放模型预测结果的路径
 parser.add_argument(
     '--seg_path',
     type=str,
-    default='/workspace/U-Mamba/data/nnUNet_raw/Dataset702_AbdomenMR/MedNextwDSC2Predict'
+    default=''
 )
+#保存评估结果的路径
 parser.add_argument(
     '--save_path',
     type=str,
-    default='/workspace/U-Mamba/data/nnUNet_raw/Dataset702_AbdomenMR/DSC/mednextwDSC2.csv'
+    default=''
 )
 
 args = parser.parse_args()
