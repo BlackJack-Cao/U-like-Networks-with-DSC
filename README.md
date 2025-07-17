@@ -12,7 +12,7 @@ Here is the overall framework :
 The setup for our work follows the same installation and configuration as U-Mamba. Please refer to the [U-Mamba repository](https://github.com/U-Mamba/U-Mamba) for detailed setup instructions.
 
 
-2. Follow the installation steps provided in [U-Mamba](https://github.com/U-Mamba/U-Mamba).
+Follow the installation steps provided in [U-Mamba](https://github.com/U-Mamba/U-Mamba).
 
 ## Model Training
 
