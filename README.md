@@ -1,5 +1,5 @@
 # U-like-Networks-with-Dynamic-Skip-Connections
-Official repository for Enhancing Feature Fusion of U-like Networks with Dynamic Skip Connections. This code is based on U-Mamba and serves as the official implementation of our paper.
+This code is based on U-Mamba and serves as the official implementation of our paper.
 
 ## Framework
 
@@ -22,18 +22,6 @@ The model training process for TTT-Unet also follows the same procedures as U-Ma
 
 Inference for our models also follows U-Mamba's setup. To generate predictions, use the `nnUNetv2_predict` command with the appropriate configuration. For further details, refer to the [U-Mamba repository](https://github.com/U-Mamba/U-Mamba).
 
-## Paper
-
-If you use our work in your research, please cite our paper as follows:
-
-```
-@article{zhou2024ttt,
-  title={TTT-Unet: Enhancing U-Net with Test-Time Training Layers for biomedical image segment},
-  author={Zhou, Rong and Yuan, Zhengqing and Yan, Zhiling and Sun, Weixiang and Zhang, Kai},
-  journal={arXiv preprint arXiv:2409.11299},
-  year={2024}
-}
-```
 
 ## Acknowledgements
 
