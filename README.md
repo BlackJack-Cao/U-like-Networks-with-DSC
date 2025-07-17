@@ -16,7 +16,7 @@ Follow the installation steps provided in [U-Mamba](https://github.com/U-Mamba/U
 
 ## Model Training
 
-The model training process for TTT-Unet also follows the same procedures as U-Mamba. For data preparation and model training, please refer to the [U-Mamba repository](https://github.com/U-Mamba/U-Mamba).
+The model training process for our models also follows the same procedures as U-Mamba. For data preparation and model training, please refer to the [U-Mamba repository](https://github.com/U-Mamba/U-Mamba).
 
 ## Inference
 
