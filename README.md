@@ -3,25 +3,50 @@ This code is based on U-Mamba and serves as the official implementation of our p
 
 ## Framework
 
-Here is the overall framework :
+Here is the overall framework:
 
 ![Framework](assets/framework.jpg)
 
 ## Installation
 
-The setup for our work follows the same installation and configuration as U-Mamba. Please refer to the [U-Mamba repository](https://github.com/U-Mamba/U-Mamba) for detailed setup instructions.
+Requirements: `Ubuntu 20.04`, `CUDA 11.8`
 
+1. Create a virtual environment:  `conda create -n ttt python=3.10 -y` and `conda activate ttt`
+2. Install Pytorch 2.0.1: `pip install torch==2.0.1 torchvision==0.15.2 --index-url https://download.pytorch.org/whl/cu118`
+3. Install Mamba: `pip install causal-conv1d>=1.2.0` and `pip install mamba-ssm --no-cache-dir`
+4. Download code: `git clone https://github.com/your-username/U-like-Networks-with-Dynamic-Skip-Connections.git`
+5. `cd U-like-Networks-with-Dynamic-Skip-Connections/umamba` and run `pip install -e .`
 
-Follow the installation steps provided in [U-Mamba](https://github.com/U-Mamba/U-Mamba).
+## Preprocessing
+
+```bash
+nnUNetv2_plan_and_preprocess -d DATASET_ID --verify_dataset_integrity
+```
 
 ## Model Training
 
-The model training process for our models also follows the same procedures as U-Mamba. For data preparation and model training, please refer to the [U-Mamba repository](https://github.com/U-Mamba/U-Mamba).
+### Train 2D models with Dynamic Skip Connections (DSC)
+
+Train 2D model with DSC:
+```bash
+nnUNetv2_train DATASET_ID 2d all -tr nnUNetTrainerXXXwDSC
+```
+
+### Train 3D models with Dynamic Skip Connections (DSC)
+
+```bash
+nnUNetv2_train DATASET_ID 3d_fullres all -tr nnUNetTrainerXXXwDSC
+```
 
 ## Inference
 
-Inference for our models also follows U-Mamba's setup. To generate predictions, use the `nnUNetv2_predict` command with the appropriate configuration. For further details, refer to the [U-Mamba repository](https://github.com/U-Mamba/U-Mamba).
+Predict testing cases with models using DSC:
 
+```bash
+nnUNetv2_predict -i INPUT_FOLDER -o OUTPUT_FOLDER -d DATASET_ID -c CONFIGURATION -f all -tr nnUNetTrainerXXXwDSC
+```
+
+`CONFIGURATION` can be `2d` and `3d_fullres` for 2D and 3D models, respectively.
 
 ## Acknowledgements
 
