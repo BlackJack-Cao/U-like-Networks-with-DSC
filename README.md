@@ -5,7 +5,7 @@ This code is based on U-Mamba and serves as the official implementation of our p
 
 Here is the overall framework:
 
-![Framework](assets/framework.jpg)
+![Framework](assets/framework.pdf)
 
 ## Installation
 
